@@ -70,7 +70,6 @@ body {
   opacity: 1;
   transform: translateX(0);
 }
-/* opcional: logo un poco más grande cuando está cerrado */
 .sidebar:not(:hover) .logo img {
   width: 50px;
   height: 50px;
@@ -83,8 +82,8 @@ body {
   align-items: center;
   gap: 15px;
 
-  padding: 25px 25px; /* 🔥 más espacio entre links */
-  margin: 7px 0;      /* 🔥 separación vertical */
+  padding: 25px 25px; 
+  margin: 7px 0;    
 
   text-decoration: none;
   color: white;
@@ -228,11 +227,9 @@ body {
   transform: scale(1.05);
   border-color: #00ff88;
 }
-
 .premium {
   border: 1px solid #00ff88;
 }
-
 .elite {
   border: 1px solid gold;
 }

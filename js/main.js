@@ -6,6 +6,7 @@ window.addEventListener("DOMContentLoaded", () => {
       "Current plan: " + plan.toUpperCase();
   }
 });
+
 const machines = [
   "Bench Press",
   "Squat Machine",
