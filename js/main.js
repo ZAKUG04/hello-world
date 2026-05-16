@@ -84,3 +84,30 @@ function fakePayPal() {
 
   }, 2000);
 }
+// Recursive countdown example
+function countdown(number) {
+  if (number <= 0) {
+    console.log("Workout Ready!");
+    return;
+  }
+
+  console.log(number);
+  countdown(number - 1);
+}
+
+countdown(3);
+
+function checkUser(name) {
+  try {
+    if (!name) {
+      throw new Error("Username is required");
+    }
+
+    console.log("Welcome " + name);
+
+  } catch (error) {
+    console.log("Error:", error.message);
+  }
+}
+
+checkUser("");
