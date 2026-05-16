@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Subscription Plans</title>
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+<!-- SIDEBAR -->
+<div class="sidebar">
+
+  <div class="logo">
+    <img src="img/logo.png" alt="logo">
+    <span class="logo-text">Gym Progress</span>
+  </div>
+
+  <a href="index.html">
+    <i class="fa-solid fa-house"></i>
+    <span class="text">Home</span>
+  </a>
+
+  <a href="workouts.html">
+    <i class="fa-solid fa-dumbbell"></i>
+    <span class="text">Workouts</span>
+  </a>
+
+  <a href="machines.html">
+    <i class="fa-solid fa-gears"></i>
+    <span class="text">Machines</span>
+  </a>
+
+  <a href="nutrition.html">
+    <i class="fa-solid fa-apple-whole"></i>
+    <span class="text">Nutrition</span>
+  </a>
+
+  <a href="subscription.html">
+    <i class="fa-solid fa-credit-card"></i>
+    <span class="text">Subscription</span>
+  </a>
+
+</div>
+  
+<!-- CONTENT -->
+<div class="content">
+
+  <div class="hero" style="background-image:url('https://images.unsplash.com/photo-1558611848-73f7eb4001a1');">
+    <h1>Choose Your Membership Plan</h1>
+  </div>
+
+  <section class="features">
+    <h2>Subscription Plans</h2>
+
+    <div class="plans">
+
+  <div class="plan" onclick="openForm('free')">
+    <h3>Free</h3>
+    <p>Basic workouts & nutrition tips</p>
+    <p><strong>$0 / month</strong></p>
+  </div>
+
+ <div class="plan premium" onclick="openForm('pro')">
+
+  <span class="badge">MOST POPULAR</span>
+
+  <h3>Pro</h3>
+  <p>Advanced training + nutrition guides</p>
+  <p><strong>$9.99 / month</strong></p>
+
+</div>
+
+  <div class="plan elite" onclick="openForm('elite')">
+    <h3>Elite</h3>
+    <p>Full access + trainer content</p>
+    <p><strong>$19.99 / month</strong></p>
+  </div>
+
+</div>
+<div class="comparison">
+  <h2>Plan Comparison</h2>
+
+  <ul>
+    <li>✔ Free: Basic workouts</li>
+    <li>✔ Pro: Nutrition + advanced workouts</li>
+    <li>✔ Elite: Trainer + full access</li>
+  </ul>
+</div>
+<div class="notice">
+    ⚠️ This is a simulation. Payment features will be enabled in the future.
+  </div>
+  </section>
+
+</div>
+
+<!-- MODAL -->
+<div id="formModal" class="modal">
+
+  <div class="modal-content">
+
+    <span class="close" onclick="closeForm()">&times;</span>
+
+    <h2>Join Subscription</h2>
+
+    <p id="selectedPlan">Plan:</p>
+
+    <form>
+      <input type="text" placeholder="Full Name" required>
+      <input type="email" placeholder="Email" required>
+      <input type="number" placeholder="Age" required>
+
+      <button type="button" class="paypal-btn" onclick="fakePayPal()">
+  <i class="fa-brands fa-paypal"></i> Pay with PayPal
+</button>
+
+<div id="paymentStatus"></div>
+    </form>
+
+  </div>
+
+</div>
+
+<script src="js/main.js"></script>
+
+</body>
+</html>
