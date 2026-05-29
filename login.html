@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gym Progress Login</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+body{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    background:#000;
+}
+
+.login-box{
+    background:#111;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 0 15px rgba(0,255,136,.3);
+    width:320px;
+    border:1px solid #222;
+}
+
+.login-box h2{
+    text-align:center;
+    margin-bottom:20px;
+    color:#00ff88;
+}
+
+.login-box input{
+    width:100%;
+    padding:12px;
+    margin-bottom:12px;
+    background:#1a1a1a;
+    color:white;
+    border:1px solid #333;
+    border-radius:6px;
+}
+
+.login-box input:focus{
+    outline:none;
+    border-color:#00ff88;
+}
+
+.login-box button{
+    width:100%;
+    padding:12px;
+    cursor:pointer;
+    background:#00ff88;
+    color:black;
+    border:none;
+    border-radius:6px;
+    font-weight:bold;
+}
+
+.login-box button:hover{
+    opacity:.9;
+}
+</style>
+</head>
+<body>
+
+<div class="login-box">
+
+    <h2>Gym Progress Tracker</h2>
+
+    <input
+        type="text"
+        id="username"
+        placeholder="Username">
+
+    <input
+        type="password"
+        id="password"
+        placeholder="Password">
+
+    <button onclick="login()">
+        Login
+    </button>
+
+</div>
+
+<script>
+
+function login(){
+
+    const username =
+        document.getElementById("username").value;
+
+    const password =
+        document.getElementById("password").value;
+
+    if(username === "" || password === ""){
+        alert("Please fill all fields");
+        return;
+    }
+
+    localStorage.setItem(
+        "currentUser",
+        username
+    );
+
+    window.location.href = "index.html";
+}
+
+</script>
+
+</body>
+</html>

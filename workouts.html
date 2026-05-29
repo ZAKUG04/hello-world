@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workouts - Gym Progress Tracker</title>
+
+    <link rel="stylesheet" href="css/style.css">
+      <!-- FONT AWESOME ICONS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- SIDEBAR -->
+ <div class="sidebar">
+
+   <div class="logo">
+    <img src="img/logo.png" alt="logo">
+    <span class="logo-text">Gym Progress</span>
+</div>
+
+<div id="welcomeUser">
+  <i class="fa-solid fa-user"></i>
+</div>
+
+    <a href="index.html">
+    <i class="fa-solid fa-house"></i>
+    <span class="text">Home</span>
+  </a>
+
+    <a href="machine.html">
+      <i class="fa-solid fa-gears"></i>
+      <span class="text">Machines</span>
+    </a>
+
+    <a href="nutrition.html">
+      <i class="fa-solid fa-apple-whole"></i>
+      <span class="text">Nutrition</span>
+    </a>
+
+    <a href="#">
+      <i class="fa-solid fa-chart-line"></i>
+      <span class="text">Marketing Fitness</span>
+    </a>
+
+    <a href="#">
+      <i class="fa-solid fa-handshake"></i>
+      <span class="text">Collaborations</span>
+    </a>
+
+    <a href="#">
+      <i class="fa-solid fa-graduation-cap"></i>
+      <span class="text">Become Trainer</span>
+    </a>
+    <a href="subscription.html">
+        <i class="fa-solid fa-credit-card"></i>
+        <span class="text">Subscription</span>
+    </a>
+    <a href="#" id="logoutBtn">
+      <i class="fa-solid fa-right-from-bracket"></i>
+      <span class="text">Logout</span>
+    </a>
+
+  </div>
+
+ <div class="content">
+
+<section class="info">
+
+    <div class="workout-hero">
+
+       <h1>💪 Personal Workout Planner</h1>
+
+        <p>
+            Create and save your workout routines.
+            Track your progress and stay consistent.
+        </p>
+        <br>
+    </div>
+
+    <div class="workout-form">
+
+        <h2>Create New Workout</h2>
+        <br>
+        <input
+            type="text"
+            id="workoutName"
+            placeholder="Workout Name (Push Day, Leg Day...)">
+
+        <select id="difficulty">
+
+            <option value="">Select Difficulty</option>
+            <option>Beginner</option>
+            <option>Intermediate</option>
+            <option>Advanced</option>
+
+        </select>
+<br>
+        <input
+            type="number"
+            id="duration"
+            placeholder="Duration (minutes)">
+
+        <textarea
+            id="notes"
+            rows="6"
+            placeholder="Example:
+Bench Press 4x10
+Incline Press 3x12
+Push Ups 3x20"></textarea>
+
+        <button onclick="saveWorkout()">
+            Save Workout
+        </button>
+
+    </div>
+
+    <div class="saved-workout">
+
+        <h2>
+            <i class="fa-solid fa-dumbbell"></i>
+            Current Workout
+        </h2>
+
+        <div id="savedWorkout">
+
+            No workout saved yet.
+
+        </div>
+
+    </div>
+
+</section>
+
+</div>
+
+    <script src="js/main.js "></script>
+
+</body>
+</html>

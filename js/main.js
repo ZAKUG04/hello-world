@@ -1,11 +1,32 @@
+// ==============================
+// LOGIN PROTECTION
+// ==============================
+
+if (
+  !localStorage.getItem("currentUser") &&
+  !window.location.pathname.includes("login.html")
+) {
+  window.location.href = "login.html";
+}
+
+// ==============================
+// USER PLAN
+// ==============================
+
 window.addEventListener("DOMContentLoaded", () => {
   const plan = localStorage.getItem("selectedPlan");
 
-  if (plan) {
-    document.getElementById("userPlan").innerText =
+  const userPlan = document.getElementById("userPlan");
+
+  if (plan && userPlan) {
+    userPlan.innerText =
       "Current plan: " + plan.toUpperCase();
   }
 });
+
+// ==============================
+// MACHINES
+// ==============================
 
 const machines = [
   "Bench Press",
@@ -21,6 +42,11 @@ window.addEventListener("DOMContentLoaded", () => {
     console.log("Machine:", m);
   });
 });
+
+// ==============================
+// WORKOUTS
+// ==============================
+
 const workouts = [
   {
     name: "Push Day",
@@ -44,6 +70,7 @@ const container = document.getElementById("workouts-container");
 if (container) {
   workouts.forEach(w => {
     const card = document.createElement("div");
+
     card.classList.add("workout-card");
 
     card.innerHTML = `
@@ -55,9 +82,16 @@ if (container) {
     container.appendChild(card);
   });
 }
+
+// ==============================
+// SUBSCRIPTION MODAL
+// ==============================
+
 function openForm(plan) {
   document.getElementById("formModal").style.display = "flex";
-  document.getElementById("selectedPlan").innerText = "Plan: " + plan.toUpperCase();
+
+  document.getElementById("selectedPlan").innerText =
+    "Plan: " + plan.toUpperCase();
 
   localStorage.setItem("selectedPlan", plan);
 }
@@ -67,38 +101,56 @@ function closeForm() {
 }
 
 function fakePayPal() {
-  const status = document.getElementById("paymentStatus");
+  const status =
+    document.getElementById("paymentStatus");
 
   status.style.color = "yellow";
   status.innerText = "Processing payment...";
 
   setTimeout(() => {
+
     status.style.color = "#00ff88";
-    status.innerText = "Payment successful (simulation) ✓";
+    status.innerText =
+      "Payment successful (simulation) ✓";
 
     setTimeout(() => {
       alert("Subscription activated (simulation only)");
+
       closeForm();
+
       status.innerText = "";
+
     }, 1500);
 
   }, 2000);
 }
-// Recursive countdown example
+
+// ==============================
+// RECURSION EXAMPLE
+// ==============================
+
 function countdown(number) {
+
   if (number <= 0) {
     console.log("Workout Ready!");
     return;
   }
 
   console.log(number);
+
   countdown(number - 1);
 }
 
 countdown(3);
 
+// ==============================
+// ERROR HANDLING EXAMPLE
+// ==============================
+
 function checkUser(name) {
+
   try {
+
     if (!name) {
       throw new Error("Username is required");
     }
@@ -106,8 +158,110 @@ function checkUser(name) {
     console.log("Welcome " + name);
 
   } catch (error) {
+
     console.log("Error:", error.message);
+
   }
 }
 
 checkUser("");
+
+// ==============================
+// SHOW LOGGED USER
+// ==============================
+
+const currentUser =
+  localStorage.getItem("currentUser");
+
+const welcomeUser =
+  document.getElementById("welcomeUser");
+
+if (currentUser && welcomeUser) {
+
+  welcomeUser.innerHTML =
+    `<i class="fa-solid fa-user"></i> ${currentUser}`;
+
+}
+
+// ==============================
+// LOGOUT
+// ==============================
+
+function logout() {
+
+  localStorage.removeItem("currentUser");
+
+  window.location.href = "login.html";
+}
+
+const logoutBtn =
+  document.getElementById("logoutBtn");
+
+if (logoutBtn) {
+
+  logoutBtn.addEventListener("click", logout);
+
+}
+
+// ======================
+// WORKOUT TRACKER
+// ======================
+
+function saveWorkout() {
+
+    const workoutName =
+        document.getElementById("workoutName")?.value;
+
+    const duration =
+        document.getElementById("duration")?.value;
+
+    const notes =
+        document.getElementById("notes")?.value;
+
+    if (!workoutName || !duration || !notes) {
+        alert("Please fill all fields");
+        return;
+    }
+
+    const workout = {
+        name: workoutName,
+        duration: duration,
+        notes: notes
+    };
+
+    localStorage.setItem(
+        "savedWorkout",
+        JSON.stringify(workout)
+    );
+
+    displayWorkout();
+
+    alert("Workout saved successfully!");
+}
+
+function displayWorkout() {
+
+    const savedWorkout =
+        localStorage.getItem("savedWorkout");
+
+    const container =
+        document.getElementById("savedWorkout");
+
+    if (!savedWorkout || !container) return;
+
+    const workout =
+        JSON.parse(savedWorkout);
+
+    container.innerHTML = `
+        <p><strong>Name:</strong> ${workout.name}</p>
+        <p><strong>Duration:</strong> ${workout.duration} min</p>
+        <p><strong>Notes:</strong> ${workout.notes}</p>
+    `;
+}
+
+// Mostrar rutina guardada al cargar la página
+window.addEventListener("DOMContentLoaded", () => {
+
+    displayWorkout();
+
+});

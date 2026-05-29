@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8" >
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gym Progress Tracker</title>
 
   <link rel="stylesheet" href="css/style.css">
@@ -16,12 +16,16 @@
   <!-- SIDEBAR -->
   <div class="sidebar">
 
-    <div class="logo">
-        <img src="img/logo.png" alt="logo">
-        <span class="logo-text">Gym Progress</span>
-    </div>
+   <div class="logo">
+    <img src="img/logo.png" alt="logo">
+    <span class="logo-text">Gym Progress</span>
+</div>
 
-    <a href="#">
+<div id="welcomeUser">
+  <i class="fa-solid fa-user"></i>
+</div>
+
+    <a href="workouts.html">
       <i class="fa-solid fa-dumbbell"></i>
       <span class="text">Workouts</span>
     </a>
@@ -54,6 +58,10 @@
         <i class="fa-solid fa-credit-card"></i>
         <span class="text">Subscription</span>
     </a>
+    <a href="#" id="logoutBtn">
+      <i class="fa-solid fa-right-from-bracket"></i>
+      <span class="text">Logout</span>
+    </a>
 
   </div>
   <!-- MAIN CONTENT -->
@@ -71,6 +79,7 @@
     <div class="info">
       <div class="info-box">
         <h2>Project Purpose</h2>
+        <br>
         <p>
           This website helps users learn about workout routines, gym machines,
           and training plans in a simple and interactive way.
@@ -81,7 +90,7 @@
     <div class="features">
 
       <h2>Explore the System</h2>
-
+      <br>
       <div class="cards">
 
         <div class="card">

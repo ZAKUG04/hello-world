@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8" >
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gym Machines Guide</title>
 
   <link rel="stylesheet" href="css/style.css">
@@ -13,37 +13,53 @@
 <body>
 
 <!-- SIDEBAR -->
-<div class="sidebar">
+ <!-- SIDEBAR -->
+  <div class="sidebar">
 
-  <div class="logo">
+   <div class="logo">
     <img src="img/logo.png" alt="logo">
     <span class="logo-text">Gym Progress</span>
-  </div>
+</div>
 
-  <a href="index.html">
-    <i class="fa-solid fa-house"></i>
-    <span class="text">Home</span>
-  </a>
+<div id="welcomeUser">
+  <i class="fa-solid fa-user"></i>
+</div>
+     <a href="index.html">
+      <i class="fa-solid fa-house"></i>
+      <span class="text">Home</span>
+     </a>
+    <a href="workouts.html">
+      <i class="fa-solid fa-dumbbell"></i>
+      <span class="text">Workouts</span>
+    </a>
 
-  <a href="#">
-    <i class="fa-solid fa-dumbbell"></i>
-    <span class="text">Workouts</span>
-  </a>
+    <a href="nutrition.html">
+      <i class="fa-solid fa-apple-whole"></i>
+      <span class="text">Nutrition</span>
+    </a>
 
-  <a href="machine.html">
-    <i class="fa-solid fa-gears"></i>
-    <span class="text">Machines</span>
-  </a>
+    <a href="#">
+      <i class="fa-solid fa-chart-line"></i>
+      <span class="text">Marketing Fitness</span>
+    </a>
 
-  <a href="nutrition.html">
-    <i class="fa-solid fa-apple-whole"></i>
-    <span class="text">Nutrition</span>
-  </a>
+    <a href="#">
+      <i class="fa-solid fa-handshake"></i>
+      <span class="text">Collaborations</span>
+    </a>
 
-  <a href="subscription.html">
-    <i class="fa-solid fa-credit-card"></i>
-    <span class="text">Subscription</span>
-  </a>
+    <a href="#">
+      <i class="fa-solid fa-graduation-cap"></i>
+      <span class="text">Become Trainer</span>
+    </a>
+    <a href="subscription.html">
+        <i class="fa-solid fa-credit-card"></i>
+        <span class="text">Subscription</span>
+    </a>
+    <a href="#" id="logoutBtn">
+      <i class="fa-solid fa-right-from-bracket"></i>
+      <span class="text">Logout</span>
+    </a>
 
 </div>
 
@@ -51,7 +67,7 @@
 <div class="content">
 
   <!-- HERO -->
-  <div class="hero" style="background-image:url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48');">
+  <div class="hero" style ="background-image:url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48');">
     <h1>Essential Gym Machines Guide</h1>
   </div>
 
@@ -115,5 +131,6 @@
     </div>
   </section>
 </div>
+<script src="js/main.js"></script>
 </body>
 </html>
