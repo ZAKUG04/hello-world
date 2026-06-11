@@ -629,17 +629,6 @@ textarea:focus {
     opacity:0.7;
     margin-bottom:10px;
 } 
-@media screen and (max-width: 768px) {
-
-    .sidebar {
-        display: none;
-    }
-
-    .mobile-nav {
-        display: flex;
-    }
-
-}
-.mobile-nav {
+.menu-toggle {
     display: none;
 }
