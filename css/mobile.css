@@ -1,0 +1,53 @@
+@media screen and (max-width: 768px) {
+
+    .sidebar {
+
+        left: -260px;
+
+        transition: 0.3s;
+
+        z-index: 9999;
+    }
+
+    .sidebar.active {
+        left: 0;
+    }
+
+    .content {
+
+        margin-left: 0;
+
+        width: 100%;
+
+        padding: 15px;
+    }
+
+    .menu-toggle {
+
+        display: block;
+
+        position: fixed;
+
+        top: 15px;
+
+        left: 15px;
+
+        z-index: 10000;
+
+        background: #1f2937;
+
+        color: white;
+
+        border: none;
+
+        border-radius: 8px;
+
+        padding: 10px 12px;
+
+        cursor: pointer;
+    }
+
+}
+.menu-toggle {
+    display: none;
+}
