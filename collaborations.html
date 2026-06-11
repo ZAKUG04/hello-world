@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Community Collaborations</title>
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- FONT AWESOME ICONS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+  <!-- SIDEBAR -->
+  <div class="sidebar">
+
+    <div class="logo">
+      <img src="img/logo.png" alt="logo">
+      <span class="logo-text">Gym Progress</span>
+    </div>
+
+    <div id="welcomeUser">
+      <i class="fa-solid fa-user"></i>
+    </div>
+
+    <a href="workouts.html">
+      <i class="fa-solid fa-dumbbell"></i>
+      <span class="text">Workouts</span>
+    </a>
+
+    <a href="machine.html">
+      <i class="fa-solid fa-gears"></i>
+      <span class="text">Machines</span>
+    </a>
+
+    <a href="nutrition.html">
+      <i class="fa-solid fa-apple-whole"></i>
+      <span class="text">Nutrition</span>
+    </a>
+
+    <a href="#">
+      <i class="fa-solid fa-chart-line"></i>
+      <span class="text">Marketing Fitness</span>
+    </a>
+
+    <a href="collaborations.html">
+      <i class="fa-solid fa-handshake"></i>
+      <span class="text">Collaborations</span>
+    </a>
+
+    <a href="#">
+      <i class="fa-solid fa-graduation-cap"></i>
+      <span class="text">Become Trainer</span>
+    </a>
+
+    <a href="subscription.html">
+      <i class="fa-solid fa-credit-card"></i>
+      <span class="text">Subscription</span>
+    </a>
+
+    <a href="#" id="logoutBtn">
+      <i class="fa-solid fa-right-from-bracket"></i>
+      <span class="text">Logout</span>
+    </a>
+
+  </div>
+
+ <div class="content">
+
+    <!-- FITRED HERO -->
+
+    <div class="fitred-banner">
+
+        <div class="fitred-title">
+            <i class="fa-solid fa-fire"></i>
+            <h1>FITRED</h1>
+        </div>
+
+        <p class="fitred-subtitle">
+            The Fitness Social Network
+        </p>
+
+        <p>
+            Connect with athletes, create challenges, share progress, and stay motivated.
+        </p>
+
+    </div>
+
+    <!-- COMMUNITY STATS -->
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>Community Members</h3>
+            <p>12</p>
+        </div>
+
+        <div class="card">
+            <h3>Challenges Created</h3>
+            <p>2</p>
+        </div>
+
+        <div class="card">
+            <h3>Completed Challenges</h3>
+            <p>1</p>
+        </div>
+
+    </div>
+
+    <!-- CREATE POST -->
+
+    <div class="info-box">
+
+        <h2>
+            <i class="fa-solid fa-square-plus"></i>
+            Share Your Progress
+        </h2>
+
+        <br>
+
+        <form id="postForm">
+
+            <textarea
+                id="postContent"
+                rows="5"
+                placeholder="What did you accomplish today?"
+                required
+            ></textarea>
+            <input
+                type="file"
+                id="postImage"
+                accept="image/*"
+            >
+
+            <br>
+
+            <button type="submit">
+                Publish Post
+            </button>
+
+        </form>
+
+    </div>
+
+    <!-- CREATE CHALLENGE -->
+
+    <div class="info-box">
+
+        <h2>
+            <i class="fa-solid fa-trophy"></i>
+            Create a Challenge
+        </h2>
+
+        <br>
+
+        <form id="challengeForm">
+
+            <input
+                type="text"
+                id="challengeTitle"
+                placeholder="Challenge Title"
+                required
+            >
+
+            <br><br>
+
+            <textarea
+                id="challengeDescription"
+                rows="4"
+                placeholder="Describe the challenge..."
+                required
+            ></textarea>
+
+            <br>
+
+            <button type="submit">
+                Create Challenge
+            </button>
+
+        </form>
+
+    </div>
+
+    <!-- TRENDING CHALLENGES -->
+
+    <div class="features">
+
+        <h2>
+            <i class="fa-solid fa-medal"></i>
+            Trending Challenges
+        </h2>
+
+        <br>
+
+        <div id="challengeList" class="cards">
+
+            <div class="card challenge-card">
+
+                <h3>🏆 100 Push-Ups Challenge</h3>
+
+                <p>
+                    Complete 100 push-ups every day for one week.
+                </p>
+
+                <br>
+
+                <button class="accept-btn">
+                    Accept Challenge
+                </button>
+
+            </div>
+
+            <div class="card challenge-card">
+
+                <h3>🔥 Summer Shred</h3>
+
+                <p>
+                    Burn 300 calories daily for 14 days.
+                </p>
+
+                <br>
+
+                <button class="accept-btn">
+                    Accept Challenge
+                </button>
+
+            </div>
+
+            <div class="card challenge-card">
+
+                <h3>💪 Bench Press Challenge</h3>
+
+                <p>
+                    Increase your bench press by 10 lbs.
+                </p>
+
+                <br>
+
+                <button class="accept-btn">
+                    Accept Challenge
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- COMMUNITY FEED -->
+
+    <div class="features">
+
+        <h2>
+            <i class="fa-solid fa-users"></i>
+            Community Feed
+        </h2>
+
+        <br>
+
+        <div id="feedContainer">
+
+            <div class="card post-card">
+
+                <h3>
+                    <i class="fa-solid fa-user"></i>
+                    Nefi
+                </h3>
+
+                <p>
+                    Today I hit a new personal record on deadlift!
+                </p>
+
+                <br>
+
+                <button class="like-btn">
+                    ❤️ Like
+                </button>
+
+            </div>
+
+            <br>
+
+            <div class="card post-card">
+
+                <h3>
+                    <i class="fa-solid fa-user"></i>
+                    FitnessKing
+                </h3>
+
+                <p>
+                    I completed the Summer Shred Challenge today!
+                </p>
+
+                <br>
+
+                <button class="like-btn">
+                    ❤️ Like
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+  <script src="js/main.js"></script>
+  <script src="js/collaborations.js"></script>
+
+</body>
+</html>
