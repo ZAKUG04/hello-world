@@ -266,14 +266,33 @@ window.addEventListener("DOMContentLoaded", () => {
 
 });
 
-const menuToggle =
-    document.getElementById("menuToggle");
+const openMenu =
+    document.getElementById("openMenu");
 
-const sidebar =
-    document.querySelector(".sidebar");
+const closeMenu =
+    document.getElementById("closeMenu");
 
-menuToggle.addEventListener("click", () => {
+const mobilePopup =
+    document.getElementById("mobilePopup");
 
-    sidebar.classList.toggle("active");
+if(openMenu){
 
-});
+    openMenu.addEventListener("click",(e)=>{
+
+        e.preventDefault();
+
+        mobilePopup.classList.add("show");
+
+    });
+
+}
+
+if(closeMenu){
+
+    closeMenu.addEventListener("click",()=>{
+
+        mobilePopup.classList.remove("show");
+
+    });
+
+}
